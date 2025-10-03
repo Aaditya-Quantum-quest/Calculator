@@ -1,0 +1,150 @@
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background-color: cornsilk;
+            padding: 20px;
+            border-radius: 30px;
+            max-width: 452px;
+            width: 100%;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            box-sizing: border-box;
+            height: 100px;
+            margin-top: 40px;
+            border-radius: 45px;
+            border: none;
+            text-align: right;
+            background-color: rgba(238, 250, 250, 1.0);
+            box-shadow: 1px 1px 20px gray;
+            padding-top: 10px;
+            padding-right: 20px;
+            font-size: 80px;
+            color: gray;
+        }
+        
+        input::placeholder {
+            font-size: 80px;
+        }
+        
+        button {
+            height: 70px;
+            width: 70px;
+            margin: 19px;
+            font-size: 22px;
+            border-radius: 50%;
+            border: none;
+            background-color: whitesmoke;
+            box-shadow: 1px 1px 20px grey;
+        }
+        
+        .row2 {
+            margin-top: 20px;
+        }
+        
+        .buttons {
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        
+        #single {
+            background-color: rgb(255, 131, 152);
+            width: 183px;
+            border: none;
+            border-radius: 60px;
+        }
+        
+        button:active {
+            font-size: 20px;
+            height: 65px;
+            width: 65px;
+            margin-right: 22px;
+            margin-left: 21px;
+        }
+        
+        #single:active {
+            width: 170px;
+            margin-left: 25.6px;
+        }
+        /* For Responsive */
+        
+        @media (width<=492px) {
+            input[type="text"],
+            select {
+                width: 100%;
+                box-sizing: border-box;
+                height: 70px;
+                margin-top: 30px;
+                border-radius: 45px;
+                border: none;
+                text-align: right;
+                color: gray;
+                background-color: rgb(238, 250, 255);
+                box-shadow: 1px 1px 20px gray;
+                padding-right: 20px;
+                font-size: 60px;
+            }
+            input::placeholder {
+                font-size: 60px;
+                color: gray;
+            }
+            .container {
+                background-color: cornsilk;
+                padding: 20px;
+                border-radius: 30px;
+                max-width: 300px;
+                width: 100%;
+            }
+            button {
+                height: 48px;
+                width: 48px;
+                margin: 10px;
+                font-size: 16px;
+                border-radius: 50%;
+                border: none;
+                background-color: whitesmoke;
+                box-shadow: 1px 1px 20px grey;
+            }
+            .buttons {
+                padding-left: 5px;
+            }
+            #single {
+                background-color: rgb(255, 131, 152);
+                width: 123px;
+                border: none;
+                border-radius: 60px;
+                font-size: 20px;
+            }
+            button:active {
+                font-size: 16px;
+                height: 45px;
+                width: 45px;
+                margin-left: 11.5px;
+                margin-right: 11.5px;
+            }
+            #single:active {
+                width: 120px;
+                margin-left: 11.5px;
+                margin-right: 13px;
+                margin-top: 11px;
+            }
+        }
