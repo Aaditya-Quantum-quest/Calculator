@@ -1,150 +1,234 @@
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-        }
-        
-        body {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background-color: lightpink;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .container {
-            background-color: cornsilk;
-            padding: 20px;
-            border-radius: 30px;
-            max-width: 452px;
-            width: 100%;
-        }
-        
-        input[type="text"],
-        select {
-            width: 100%;
-            box-sizing: border-box;
-            height: 100px;
-            margin-top: 40px;
-            border-radius: 45px;
-            border: none;
-            text-align: right;
-            background-color: rgba(238, 250, 250, 1.0);
-            box-shadow: 1px 1px 20px gray;
-            padding-top: 10px;
-            padding-right: 20px;
-            font-size: 80px;
-            color: gray;
-        }
-        
-        input::placeholder {
-            font-size: 80px;
-        }
-        
-        button {
-            height: 70px;
-            width: 70px;
-            margin: 19px;
-            font-size: 22px;
-            border-radius: 50%;
-            border: none;
-            background-color: whitesmoke;
-            box-shadow: 1px 1px 20px grey;
-        }
-        
-        .row2 {
-            margin-top: 20px;
-        }
-        
-        .buttons {
-            margin-left: 3px;
-            margin-right: 3px;
-        }
-        
-        #single {
-            background-color: rgb(255, 131, 152);
-            width: 183px;
-            border: none;
-            border-radius: 60px;
-        }
-        
-        button:active {
-            font-size: 20px;
-            height: 65px;
-            width: 65px;
-            margin-right: 22px;
-            margin-left: 21px;
-        }
-        
-        #single:active {
-            width: 170px;
-            margin-left: 25.6px;
-        }
-        /* For Responsive */
-        
-        @media (width<=492px) {
-            input[type="text"],
-            select {
-                width: 100%;
-                box-sizing: border-box;
-                height: 70px;
-                margin-top: 30px;
-                border-radius: 45px;
-                border: none;
-                text-align: right;
-                color: gray;
-                background-color: rgb(238, 250, 255);
-                box-shadow: 1px 1px 20px gray;
-                padding-right: 20px;
-                font-size: 60px;
-            }
-            input::placeholder {
-                font-size: 60px;
-                color: gray;
-            }
-            .container {
-                background-color: cornsilk;
-                padding: 20px;
-                border-radius: 30px;
-                max-width: 300px;
-                width: 100%;
-            }
-            button {
-                height: 48px;
-                width: 48px;
-                margin: 10px;
-                font-size: 16px;
-                border-radius: 50%;
-                border: none;
-                background-color: whitesmoke;
-                box-shadow: 1px 1px 20px grey;
-            }
-            .buttons {
-                padding-left: 5px;
-            }
-            #single {
-                background-color: rgb(255, 131, 152);
-                width: 123px;
-                border: none;
-                border-radius: 60px;
-                font-size: 20px;
-            }
-            button:active {
-                font-size: 16px;
-                height: 45px;
-                width: 45px;
-                margin-left: 11.5px;
-                margin-right: 11.5px;
-            }
-            #single:active {
-                width: 120px;
-                margin-left: 11.5px;
-                margin-right: 13px;
-                margin-top: 11px;
-            }
-        }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #3588CA 0%, #0191B4 25%, #D3CD1B 50%, #FFBF00 75%, #FE7A15 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  @keyframes gradientShift {
+      0% {
+          background-position: 0% 50%;
+      }
+
+      50% {
+          background-position: 100% 50%;
+      }
+
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+  .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 30px;
+      border-radius: 35px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3),
+          0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+      animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: scale(0.95);
+      }
+
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  #input {
+      width: 100%;
+      height: 160px;
+      margin-bottom: 25px;
+      border-radius: 25px;
+      border: none;
+      text-align: right;
+      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+      box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1),
+          inset -3px -3px 10px rgba(255, 255, 255, 0.9);
+      padding: 30px 25px;
+      font-size: 4rem;
+      font-weight: 500;
+      color: #2d3436;
+      transition: all 0.3s ease;
+  }
+
+  #input::placeholder {
+      color: #b2bec3;
+  }
+
+  #input:focus {
+      outline: none;
+      box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.15),
+          inset -3px -3px 10px rgba(255, 255, 255, 0.9),
+          0 0 0 3px rgba(53, 136, 202, 0.2);
+  }
+
+  .row1 {
+      display: block;
+      margin-bottom: 25px;
+  }
+
+  .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+  }
+
+  .buttons:last-child {
+      margin-bottom: 0;
+  }
+
+  button {
+      height: 70px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+  }
+
+  button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+  }
+
+  button:active::before {
+      width: 200px;
+      height: 200px;
+  }
+
+  button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Operator buttons - Blue tones */
+  .row2 button:nth-child(1),
+  .row2 button:nth-child(2) {
+      background: linear-gradient(145deg, #3588CA, #0191B4);
+      color: white;
+  }
+
+  .row2 button:nth-child(3),
+  .row2 button:nth-child(4),
+  .row3 button:nth-child(4),
+  .row4 button:nth-child(4),
+  .row5 button:nth-child(4) {
+      background: linear-gradient(145deg, #FE7A15, #ff8c3a);
+      color: white;
+  }
+
+  /* Number buttons - White/Light */
+  .row3 button:not(:nth-child(4)),
+  .row4 button:not(:nth-child(4)),
+  .row5 button:not(:nth-child(4)),
+  .row6 button:nth-child(1),
+  .row6 button:nth-child(2) {
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      color: #2d3436;
+  }
+
+  /* Equals button - Yellow gradient */
+  #single {
+      grid-column: span 2;
+      background: linear-gradient(145deg, #FFBF00, #D3CD1B);
+      color: white;
+      font-size: 1.6rem;
+  }
+
+  #single:hover {
+      background: linear-gradient(145deg, #D3CD1B, #FFBF00);
+  }
+
+  /* Responsive design */
+  @media (max-width: 492px) {
+      .container {
+          max-width: 340px;
+          padding: 25px;
+          border-radius: 30px;
+      }
+
+      #input {
+          height: 110px;
+          font-size: 2.8rem;
+          padding: 20px 20px;
+          margin-bottom: 20px;
+      }
+
+      button {
+          height: 60px;
+          font-size: 1.2rem;
+          border-radius: 15px;
+      }
+
+      .buttons {
+          gap: 10px;
+          margin-bottom: 10px;
+      }
+
+      #single {
+          font-size: 1.4rem;
+      }
+  }
+
+  @media (max-width: 380px) {
+      .container {
+          max-width: 300px;
+          padding: 20px;
+      }
+
+      #input {
+          height: 80px;
+          font-size: 1.8rem;
+      }
+
+      button {
+          height: 50px;
+          font-size: 1.1rem;
+      }
+
+      .buttons {
+          gap: 8px;
+      }
+  }
