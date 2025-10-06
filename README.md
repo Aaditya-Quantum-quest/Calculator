@@ -1,2 +1,2 @@
 # Calculator
-a Responsive Calculator that will work in all screen sizes
+A Responsive Calculator that will work in all screen sizes
